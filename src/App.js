@@ -1,17 +1,13 @@
-import profileImg from './images/profilePhoto.png'
+import React from 'react'
+
+import Info from './Info'
 import photo1 from './images/photo1.png'
 import photo2 from './images/photo2.png'
 import photo3 from './images/photo3.png'
 import photo4 from './images/photo4.png'
 import photo5 from './images/photo5.png'
 import photo6 from './images/photo6.png'
-
-const Info = ({ number, crit }) => (
-  <div className="bg-gray-200 w-24 text-center rounded-xl p-3">
-    <div className="text-gray-600">{number}</div>
-    <div className="text-gray-400 text-xs">{crit}</div>
-  </div>
-)
+import profileImg from './images/profilePhoto.png'
 
 const Image = ({ className, alt, ...props }) => (
   <img className={`rounded-xl shadow-xl ` + className} alt={alt} {...props} />
@@ -25,18 +21,18 @@ function App() {
         <h1 className="text-gray-600 text-xl mb-2">Rodney Cotton</h1>
         <h2 className="text-gray-400 text-xs mb-5">Helsinki, Finland</h2>
         <div className="grid grid-cols-3 gap-6">
-          <Info number="100" crit="Posts" />
-          <Info number="2,242" crit="Follower" />
-          <Info number="1,432" crit="Following" />
+          <Info number={100} crit="Posts" />
+          <Info number={2242} crit="Follower" />
+          <Info number={1432} crit="Following" />
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4  md:gap-8">
+      <div className="grid grid-cols-3 gap-4 md:gap-8">
         <Image src={photo1} alt="photo1" />
-        <Image className="col-span-2" src={photo2} alt="photo1" />
-        <Image className="col-span-2" src={photo3} alt="photo1" />
-        <Image className="row-span-2" src={photo4} alt="photo1" />
-        <Image src={photo5} alt="photo1" />
-        <Image src={photo6} alt="photo1" />
+        <Image className="col-span-2" src={photo2} alt="photo2" />
+        <Image className="col-span-2" src={photo3} alt="photo3" />
+        <Image className="row-span-2" src={photo4} alt="photo4" />
+        <Image src={photo5} alt="photo5" />
+        <Image src={photo6} alt="photo6" />
       </div>
       <div className="text-center text-xs text-gray-400">
         Tung Teng @ DevChallenges.io
