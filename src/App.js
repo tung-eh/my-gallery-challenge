@@ -30,7 +30,7 @@ function App() {
           <Info number="1,432" crit="Following" />
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-3 gap-4  md:gap-8">
         <Image src={photo1} alt="photo1" />
         <Image className="col-span-2" src={photo2} alt="photo1" />
         <Image className="col-span-2" src={photo3} alt="photo1" />
